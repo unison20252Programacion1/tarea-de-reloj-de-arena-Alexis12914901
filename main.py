@@ -17,11 +17,6 @@ def main():
     else:
         data = sys.stdin.read().strip().splitlines()
         
-    # Validar que la altura no sea igual a 0
-    if len(data) = 0:
-        print("Error: La altura debe ser un entero positivo")
-        return
-
     # Validar que se recibieron dos líneas
     if len(data) < 2:
         print("Error: Se esperan 2 lineas de entrada (altura, caracter)")
@@ -37,6 +32,11 @@ def main():
     except ValueError:
         # TODO: imprimir "Error: La altura debe ser un numero entero" y salir
         print("Error: La altura debe ser un numero entero")
+
+    # Validar que la altura no sea un string vacío o cero
+    if m_str == "0":
+        print("Error: La altura debe ser un entero positivo")
+        return
 
     # TODO: llamar a la función triangulo_simetrico con los parámetros m y s
     reloj_arena(m, s)
