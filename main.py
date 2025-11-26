@@ -34,7 +34,7 @@ def main():
         print("Error: La altura debe ser un numero entero")
 
     # Validar que la altura no sea un string vacío o cero
-    if m_str == 0:
+    if m_str <= 0:
         print("Error: La altura debe ser un entero positivo")
         return
 
