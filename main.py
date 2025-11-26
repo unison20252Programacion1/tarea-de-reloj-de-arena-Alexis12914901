@@ -16,6 +16,11 @@ def main():
         data.append(input("Ingresa el caracter: "))
     else:
         data = sys.stdin.read().strip().splitlines()
+        
+    # Validar si la altura es un positivo
+    if len(data) < 0:
+        print("Error: La altura debe ser un entero positivo")
+        return
 
     # Validar que se recibieron dos líneas
     if len(data) < 2:
